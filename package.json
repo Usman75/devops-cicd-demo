@@ -1,0 +1,47 @@
+{
+  "name": "devops-cicd-demo",
+  "version": "1.0.0",
+  "description": "A complete DevOps CI/CD pipeline demonstration project with automated deployment to GitHub Pages",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "test": "echo \"No tests specified\" && exit 0",
+    "build": "echo \"Building project...\" && mkdir -p dist && cp -r index.html css js README.md dist/",
+    "validate": "html-validate index.html && css-validate css/style.css",
+    "lint": "eslint js/script.js",
+    "deploy": "npm run build && echo \"Deployment package created in dist/ folder\"",
+    "clean": "rm -rf dist/",
+    "help": "echo \"Available commands: start, dev, serve, test, build, validate, lint, deploy, clean, help\""
+  },
+  "keywords": [
+    "devops",
+    "ci-cd",
+    "github-actions",
+    "github-pages",
+    "web-development",
+    "automation",
+    "deployment",
+    "pipeline"
+  ],
+  "author": "Muhammad Usman Tahir - Full Stack Blockchain Developer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Usman75/devops-cicd-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Usman75/devops-cicd-demo/issues"
+  },
+  "homepage": "https://usman75.github.io/devops-cicd-demo/",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 

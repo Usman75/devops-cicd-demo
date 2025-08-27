@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps CI/CD Demo - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-rocket"></i>
+                <span>DevOps Demo</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#pipeline" class="nav-link">CI/CD</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Welcome to <span class="highlight">DevOps</span> World
+                </h1>
+                <p class="hero-subtitle">
+                    Experience the power of Continuous Integration and Continuous Deployment
+                </p>
+                <p class="hero-author">
+                    By <strong>Muhammad Usman Tahir</strong> - Full Stack Blockchain Developer
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('pipeline')">
+                        <i class="fas fa-play"></i>
+                        Explore CI/CD
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="pipeline-animation">
+                    <div class="pipeline-step">
+                        <i class="fas fa-code"></i>
+                        <span>Code</span>
+                    </div>
+                    <div class="pipeline-arrow">→</div>
+                    <div class="pipeline-step">
+                        <i class="fas fa-cogs"></i>
+                        <span>Build</span>
+                    </div>
+                    <div class="pipeline-arrow">→</div>
+                    <div class="pipeline-step">
+                        <i class="fas fa-rocket"></i>
+                        <span>Deploy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About This Project</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>What is DevOps?</h3>
+                    <p>
+                        DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). 
+                        It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.
+                    </p>
+                    <h3>Key Benefits</h3>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Faster delivery of features</li>
+                        <li><i class="fas fa-check"></i> More reliable releases</li>
+                        <li><i class="fas fa-check"></i> Better collaboration</li>
+                        <li><i class="fas fa-check"></i> Increased efficiency</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Automated</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Monitoring</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Downtime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CI/CD Pipeline Section -->
+    <section id="pipeline" class="pipeline">
+        <div class="container">
+            <h2 class="section-title">CI/CD Pipeline</h2>
+            <div class="pipeline-flow">
+                <div class="pipeline-stage">
+                    <div class="stage-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>1. Code Push</h3>
+                    <p>Developer pushes code to GitHub repository</p>
+                    <div class="stage-status success">
+                        <i class="fas fa-check"></i>
+                        <span>Triggered</span>
+                    </div>
+                </div>
+                
+                <div class="pipeline-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="pipeline-stage">
+                    <div class="stage-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>2. Build & Test</h3>
+                    <p>GitHub Actions runs automated tests and validation</p>
+                    <div class="stage-status success">
+                        <i class="fas fa-check"></i>
+                        <span>Passed</span>
+                    </div>
+                </div>
+
+                <div class="pipeline-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="pipeline-stage">
+                    <div class="stage-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>3. Deploy</h3>
+                    <p>Automatically deployed to GitHub Pages</p>
+                    <div class="stage-status success">
+                        <i class="fas fa-check"></i>
+                        <span>Live</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pipeline-demo">
+                <h3>Try It Yourself!</h3>
+                <p>Make a change to this file and push to see the pipeline in action:</p>
+                <div class="demo-steps">
+                    <div class="demo-step">
+                        <span class="step-number">1</span>
+                        <span>Edit any file in this project</span>
+                    </div>
+                    <div class="demo-step">
+                        <span class="step-number">2</span>
+                        <span>Commit and push to GitHub</span>
+                    </div>
+                    <div class="demo-step">
+                        <span class="step-number">3</span>
+                        <span>Watch GitHub Actions deploy automatically!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>Have questions about DevOps or this project? Feel free to reach out!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>utahir.hire@gmail.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/Usman75</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/usmantahir1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DevOps CI/CD Demo</h4>
+                    <p>By Muhammad Usman Tahir - Full Stack Blockchain Developer</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#pipeline">CI/CD</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Technologies</h4>
+                    <ul>
+                        <li>GitHub Actions</li>
+                        <li>GitHub Pages</li>
+                        <li>HTML5/CSS3/JS</li>
+                        <li>DevOps Practices</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevOps CI/CD Demo. Built with ❤️ by Usman for DevOps learning.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
